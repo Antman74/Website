@@ -19,21 +19,27 @@ body {
 header {
     background: transparent; /* Transparent header */
     padding: 1rem;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
 }
 
 header nav {
-    position: absolute;
-    top: 20px;
-    right: 20px;
+    flex: 1; /* Take remaining space */
+    text-align: right;
 }
 
 header nav ul {
     list-style: none;
+    display: flex;
+    justify-content: flex-end;
 }
 
 header nav ul li {
-    display: inline;
     margin-left: 20px;
 }
 
