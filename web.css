@@ -20,7 +20,7 @@ header {
     background: transparent; /* Transparent header */
     padding: 1rem;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
 }
 
@@ -29,22 +29,15 @@ header h1 {
 }
 
 header nav {
-    flex: 1; /* Take remaining space */
-    text-align: right;
+    margin-top: 20px;
 }
 
 header nav ul {
     list-style: none;
-    display: flex;
-    justify-content: flex-end;
 }
 
 header nav ul li {
-    margin-left: 20px;
-}
-
-header nav ul li:first-child {
-    margin-left: 0;
+    margin-bottom: 10px;
 }
 
 header nav ul li a {
@@ -79,4 +72,18 @@ a {
 
 a:hover {
     color: #c77dff; /* Lighter shade of deep purple */
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 600px) {
+    header {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header nav {
+        margin-top: 0;
+        margin-left: 20px;
+    }
 }
